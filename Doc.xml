@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE records>
+
+<records 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="Schema.xsd">
+
+  <client id="11001" createdOn="2021-04-26"> 
+    <demoData> <!-- Demographic data: -->
+        <lastName>JOHNS</lastName>
+        <firstName>Artur</firstName>
+        <birthDate>1982-03-31</birthDate>
+        <gender>male</gender>
+        <maritalStatus>single</maritalStatus>
+        <address>5 Rue Legendre</address>
+        <city>Paris</city>
+        <zipcode>75017</zipcode>
+        <emergencyInfo>Eric Johns 01 05 45 39 98</emergencyInfo>
+    </demoData>
+    <adminData> <!-- Administrative data: -->
+        <contract>basic</contract>
+        <reqCopayment>yes</reqCopayment>
+        <benefitDeductibles>no</benefitDeductibles>
+        <amountPaid currency="euros">252.45</amountPaid>
+        <provider>
+            <practitionerType></practitionerType>
+            <physicianSpec></physicianSpec>
+            <institutionNature>public hospital</institutionNature>
+        </provider>
+    </adminData>
+    <riskStatus> <!-- Health risks and health status: -->
+        <lifestyle> <!-- Behavior and lifestyle -->
+            <tobacco>no</tobacco>
+            <sport>yes</sport>
+        </lifestyle>
+        <antecedents> <!-- Family history and genetic factors -->
+            <cancerFirstDegree>no</cancerFirstDegree>
+            <cardiovascFirstDegree>yes</cardiovascFirstDegree>
+            <geneticFirstDegree>no</geneticFirstDegree>
+            <others></others>
+        </antecedents>
+        <qualityOfLife> <!-- Health status (quality of life) -->
+            <physFunc>8</physFunc>
+            <mentalFunc>8</mentalFunc>
+            <cognitiveFunc>8</cognitiveFunc>
+            <socialFunc>6</socialFunc>
+        </qualityOfLife>
+    </riskStatus>
+    <medHistory> <!-- Patient medical history:  -->
+        <hospAdmissions>2</hospAdmissions>
+        <surgeries>1</surgeries>
+        <pregnancies></pregnancies>
+        <livebirth></livebirth>
+    </medHistory>
+    <currentCondMngmt> <!-- Current management of health conditions: -->
+        <healthScreening>yes</healthScreening>
+        <diagnoses>back pain</diagnoses>
+        <allergies>peanuts</allergies>
+        <procedures></procedures>
+        <labTests>Complete blood count</labTests>
+        <labTests>XRay</labTests>
+        <medPrescriptions>Antihistamine</medPrescriptions>
+        <counseling></counseling>
+    </currentCondMngmt>
+    <outcomesData>High-level of functioning and well-being</outcomesData> <!-- Outcomes data: -->
+  </client>
+  
+  <client id="11002" createdOn="2021-04-27"> 
+    <demoData> <!-- Demographic data: -->
+        <lastName>DUPOND</lastName>
+        <firstName>Alice</firstName>
+        <birthDate>1975-03-12</birthDate>
+        <gender>female</gender>
+        <maritalStatus>married</maritalStatus>
+        <address>280 Rue Caroline</address>
+        <city>Paris</city>
+        <zipcode>75017</zipcode>
+        <emergencyInfo>Serge Dupond 01 25 35 88 91</emergencyInfo>
+    </demoData>
+    <adminData> <!-- Administrative data: -->
+        <contract>extended</contract>
+        <reqCopayment>no</reqCopayment>
+        <benefitDeductibles>no</benefitDeductibles>
+        <amountPaid currency="euros">60.45</amountPaid>
+        <provider>
+            <practitionerType>Private practitioner</practitionerType>
+            <physicianSpec>Sonographer</physicianSpec>
+            <institutionNature></institutionNature>
+        </provider>
+    </adminData>
+    <riskStatus> <!-- Health risks and health status: -->
+        <lifestyle> <!-- Behavior and lifestyle -->
+            <tobacco>no</tobacco>
+            <sport>no</sport>
+        </lifestyle>
+        <antecedents> <!-- Family history and genetic factors -->
+            <cancerFirstDegree>yes</cancerFirstDegree>
+            <cardiovascFirstDegree>yes</cardiovascFirstDegree>
+            <geneticFirstDegree>no</geneticFirstDegree>
+            <others></others>
+        </antecedents>
+        <qualityOfLife> <!-- Health status (quality of life) -->
+            <physFunc>5</physFunc>
+            <mentalFunc>7</mentalFunc>
+            <cognitiveFunc>7</cognitiveFunc>
+            <socialFunc>7</socialFunc>
+        </qualityOfLife>
+    </riskStatus>
+    <medHistory> <!-- Patient medical history:  -->
+        <hospAdmissions>1</hospAdmissions>
+        <surgeries></surgeries>
+        <pregnancies>1</pregnancies>
+        <livebirth>1</livebirth>
+    </medHistory>
+    <currentCondMngmt> <!-- Current management of health conditions: -->
+        <healthScreening>yes</healthScreening>
+        <diagnoses>Reflux esophagitis</diagnoses>
+        <allergies>Penicilline</allergies>
+        <procedures></procedures>
+        <labTests>Complete blood count</labTests>
+        <labTests>Echographie</labTests>
+        <labTests>Pap test</labTests>
+        <medPrescriptions></medPrescriptions>
+        <counseling>Gastroenterologist</counseling>
+    </currentCondMngmt>
+    <outcomesData>High-level of functioning and well-being</outcomesData> <!-- Outcomes data: -->
+  </client>
+
+  <client id="11003" createdOn="2021-04-27"> 
+    <demoData> <!-- Demographic data: -->
+        <lastName>COSSIN</lastName>
+        <firstName>Julie</firstName>
+        <birthDate>1947-12-01</birthDate>
+        <gender>female</gender>
+        <maritalStatus>widowed</maritalStatus>
+        <address>19 Rue du Capitaine Ferber</address>
+        <city>Paris</city>
+        <zipcode>75020</zipcode>
+        <emergencyInfo></emergencyInfo>
+    </demoData>
+    <adminData> <!-- Administrative data: -->
+        <contract>extended</contract>
+        <reqCopayment>yes</reqCopayment>
+        <benefitDeductibles>yes</benefitDeductibles>
+        <amountPaid currency="euros">3650</amountPaid>
+        <provider>
+            <practitionerType>Surgeon</practitionerType>
+            <physicianSpec></physicianSpec>
+            <institutionNature>Private hospital</institutionNature>
+        </provider>
+    </adminData>
+    <riskStatus> <!-- Health risks and health status: -->
+        <lifestyle> <!-- Behavior and lifestyle -->
+            <tobacco>yes</tobacco>
+            <sport>no</sport>
+        </lifestyle>
+        <antecedents> <!-- Family history and genetic factors -->
+            <cancerFirstDegree>no</cancerFirstDegree>
+            <cardiovascFirstDegree>yes</cardiovascFirstDegree>
+            <geneticFirstDegree>no</geneticFirstDegree>
+            <others></others>
+        </antecedents>
+        <qualityOfLife> <!-- Health status (quality of life) -->
+            <physFunc>3</physFunc>
+            <mentalFunc>6</mentalFunc>
+            <cognitiveFunc>6</cognitiveFunc>
+            <socialFunc>4</socialFunc>
+        </qualityOfLife>
+    </riskStatus>
+    <medHistory> <!-- Patient medical history:  -->
+        <hospAdmissions>6</hospAdmissions>
+        <surgeries>3</surgeries>
+        <pregnancies>2</pregnancies>
+        <livebirth>3</livebirth>
+    </medHistory>
+    <currentCondMngmt> <!-- Current management of health conditions: -->
+        <healthScreening>no</healthScreening>
+        <diagnoses>Hypertension</diagnoses>
+        <diagnoses>Osteoarthritis</diagnoses>
+        <diagnoses>Anxiety</diagnoses>
+        <allergies>sulfamides</allergies>
+        <procedures></procedures>
+        <labTests>Blood cholesterol test</labTests>
+        <labTests>Blood glucose test</labTests>
+        <labTests>TSH test</labTests>
+        <labTests>XRay</labTests>
+        <medPrescriptions>Hypertension medications</medPrescriptions>
+        <counseling>cardiologist</counseling>
+    </currentCondMngmt>
+    <outcomesData>Readmission to hospital</outcomesData> <!-- Outcomes data: -->
+  </client>
+
+  <client id="11005" createdOn="2021-04-28"> 
+    <demoData> <!-- Demographic data: -->
+        <lastName>BISLEAU</lastName>
+        <firstName>Marc</firstName>
+        <birthYear>1965</birthYear>
+        <gender>male</gender>
+        <maritalStatus>divorced</maritalStatus>
+        <address>15 rue de Joyenval</address>
+        <city>Chambourcy</city>
+        <zipcode>78240</zipcode>
+        <emergencyInfo>Michel Bisleau 02 04 56 33 12</emergencyInfo>
+    </demoData>
+    <adminData> <!-- Administrative data: -->
+        <contract>full coverage</contract>
+        <reqCopayment>yes</reqCopayment>
+        <benefitDeductibles>yes</benefitDeductibles>
+        <amountPaid currency="euros">186.35</amountPaid>
+        <provider>
+            <practitionerType>Hospitalist</practitionerType>
+            <physicianSpec>trauma dept</physicianSpec>
+            <institutionNature>public hospitel</institutionNature>
+        </provider>
+    </adminData>
+    <riskStatus> <!-- Health risks and health status: -->
+        <lifestyle> <!-- Behavior and lifestyle -->
+            <tobacco>yes</tobacco>
+            <sport>yes</sport>
+        </lifestyle>
+        <antecedents> <!-- Family history and genetic factors -->
+            <cancerFirstDegree>no</cancerFirstDegree>
+            <cardiovascFirstDegree>yes</cardiovascFirstDegree>
+            <geneticFirstDegree>yes</geneticFirstDegree>
+            <others></others>
+        </antecedents>
+        <qualityOfLife> <!-- Health status (quality of life) -->
+            <physFunc>7</physFunc>
+            <mentalFunc>6</mentalFunc>
+            <cognitiveFunc>7</cognitiveFunc>
+            <socialFunc>8</socialFunc>
+        </qualityOfLife>
+    </riskStatus>
+    <medHistory> <!-- Patient medical history:  -->
+        <hospAdmissions>3</hospAdmissions>
+        <surgeries></surgeries>
+        <pregnancies></pregnancies>
+        <livebirth></livebirth>
+    </medHistory>
+    <currentCondMngmt> <!-- Current management of health conditions: -->
+        <healthScreening>yes</healthScreening>
+        <diagnoses>Asthma</diagnoses>
+        <allergies></allergies>
+        <procedures></procedures>
+        <labTests>XRay</labTests>
+        <medPrescriptions>Leg plaster</medPrescriptions>
+        <medPrescriptions>Paracetamol</medPrescriptions>
+        <counseling>Surgeon</counseling>
+    </currentCondMngmt>
+    <outcomesData>Unexpected complications or side effect of care</outcomesData> <!-- Outcomes data: -->
+  </client>
+
+  <client id="11006" createdOn="2021-04-29"> 
+    <demoData> <!-- Demographic data: -->
+        <lastName>EPAIN</lastName>
+        <firstName>Anne-Sophie</firstName>
+        <birthDate>2005-01-01</birthDate>
+        <gender>female</gender>
+        <maritalStatus>single</maritalStatus>
+        <address>254 rue Danton</address>
+        <city>Torcy</city>
+        <zipcode>77200</zipcode>
+        <emergencyInfo>Jeanne Epain 01 03 44 55 87</emergencyInfo>
+    </demoData>
+    <adminData> <!-- Administrative data: -->
+        <contract>basic</contract>
+        <reqCopayment>no</reqCopayment>
+        <benefitDeductibles>no</benefitDeductibles>
+        <amountPaid currency="euros">68</amountPaid>
+        <provider>
+            <practitionerType>General medecin</practitionerType>
+            <physicianSpec></physicianSpec>
+            <institutionNature>public hospital</institutionNature>
+        </provider>
+    </adminData>
+    <riskStatus> <!-- Health risks and health status: -->
+        <lifestyle> <!-- Behavior and lifestyle -->
+            <tobacco>no</tobacco>
+            <sport>yes</sport>
+        </lifestyle>
+        <antecedents> <!-- Family history and genetic factors -->
+            <cancerFirstDegree>no</cancerFirstDegree>
+            <cardiovascFirstDegree>no</cardiovascFirstDegree>
+            <geneticFirstDegree>no</geneticFirstDegree>
+            <others>Parental divorce</others>
+        </antecedents>
+        <qualityOfLife> <!-- Health status (quality of life) -->
+            <physFunc>8</physFunc>
+            <mentalFunc>9</mentalFunc>
+            <cognitiveFunc>8</cognitiveFunc>
+            <socialFunc>9</socialFunc>
+        </qualityOfLife>
+    </riskStatus>
+    <medHistory> <!-- Patient medical history:  -->
+        <hospAdmissions>1</hospAdmissions>
+        <surgeries></surgeries>
+        <pregnancies></pregnancies>
+        <livebirth></livebirth>
+    </medHistory>
+    <currentCondMngmt> <!-- Current management of health conditions: -->
+        <healthScreening>yes</healthScreening>
+        <diagnoses>Anaphylaxis</diagnoses>
+        <diagnoses>Allergic rhinitis</diagnoses>
+        <diagnoses>Respiratory problems</diagnoses>
+        <allergies>pollens</allergies>
+        <allergies>Penicilline</allergies>
+        <procedures>Epinephrine</procedures>
+        <labTests></labTests>
+        <medPrescriptions>antihistamin</medPrescriptions>
+        <counseling>Pulmonologist</counseling>
+    </currentCondMngmt>
+    <outcomesData>High-level of functioning and well-being</outcomesData> <!-- Outcomes data: -->
+  </client>    
+
+</records>

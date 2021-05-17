@@ -1,0 +1,49 @@
+<!-- Created by XSLT from client records -->
+<?xml-stylesheet href="lifequal.xsl" type="text/xsl"?>
+<Persons><!--Created by XSLT from client records -->
+  <Person>
+      <Gender>male</Gender>
+      <Age>39</Age>
+      <PhysicalFunc>8</PhysicalFunc>
+      <MentalFunc>8</MentalFunc>
+      <CognitiveFunc>8</CognitiveFunc>
+      <SocialFunc>6</SocialFunc>
+   </Person>
+  
+  <Person>
+      <Gender>female</Gender>
+      <Age>46</Age>
+      <PhysicalFunc>5</PhysicalFunc>
+      <MentalFunc>7</MentalFunc>
+      <CognitiveFunc>7</CognitiveFunc>
+      <SocialFunc>7</SocialFunc>
+   </Person>
+
+  <Person>
+      <Gender>female</Gender>
+      <Age>74</Age>
+      <PhysicalFunc>3</PhysicalFunc>
+      <MentalFunc>6</MentalFunc>
+      <CognitiveFunc>6</CognitiveFunc>
+      <SocialFunc>4</SocialFunc>
+   </Person>
+
+  <Person>
+      <Gender>male</Gender>
+      <Age>56</Age>
+      <PhysicalFunc>7</PhysicalFunc>
+      <MentalFunc>6</MentalFunc>
+      <CognitiveFunc>7</CognitiveFunc>
+      <SocialFunc>8</SocialFunc>
+   </Person>
+
+  <Person>
+      <Gender>female</Gender>
+      <Age>16</Age>
+      <PhysicalFunc>8</PhysicalFunc>
+      <MentalFunc>9</MentalFunc>
+      <CognitiveFunc>8</CognitiveFunc>
+      <SocialFunc>9</SocialFunc>
+   </Person>    
+
+</Persons>

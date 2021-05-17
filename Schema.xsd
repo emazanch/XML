@@ -1,0 +1,198 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">
+      Database of Health Insurance Company"
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:element name="records" type="recType"/>
+ 
+  <xsd:complexType name="recType">
+     <xsd:sequence>
+       <xsd:element name="client" type="clientType" minOccurs="0" maxOccurs="unbounded"/>
+     </xsd:sequence> 
+  </xsd:complexType>
+
+   <xsd:complexType name="clientType">
+     <xsd:sequence>
+       <xsd:element name="demoData" type="demoType"/>
+       <xsd:element name="adminData" type="adminType"/>
+       <xsd:element name="riskStatus" type="riskStatusType"/>
+       <xsd:element name="medHistory" type="medHistoryType"/>
+       <xsd:element name="currentCondMngmt" type="currentCondMngType"/>
+       <xsd:element name="outcomesData" type="outcomesDataType"/>
+     </xsd:sequence>   
+     <xsd:attribute name="id" use="required">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">   
+             <xsd:pattern value="[110-9]{5}"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+     </xsd:attribute>
+     <xsd:attribute name="createdOn" type="xsd:date" use="required"/>
+   </xsd:complexType>
+
+   <xsd:complexType name="demoType">  
+     <xsd:sequence>
+       <xsd:element name="firstName" minOccurs="1" maxOccurs="unbounded">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">   
+              <xsd:pattern value="[A-Z]*"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+       </xsd:element>
+       <xsd:element name="lastName" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+       <xsd:choice>
+          <xsd:element name="birthDate" type="xsd:date"/>
+          <xsd:element name="birthYear" type="xsd:gYear"/>
+       </xsd:choice>
+       <xsd:element name="gender" type="genderType"/>
+       <xsd:element name="maritalStatus" type="maritalType"/>
+       <xsd:element name="address" type="xsd:string"/>
+       <xsd:element name="city" type="xsd:string"/>
+       <xsd:element name="zipcode" type="zCode"/>
+       <xsd:element name="emergencyInfo" type="xsd:string"/>
+     </xsd:sequence>   
+   </xsd:complexType>
+
+   <xsd:simpleType name="genderType">
+     <xsd:restriction base="xsd:string">
+        <xsd:pattern value="male|female"/>
+     </xsd:restriction>
+   </xsd:simpleType>
+
+   <xsd:simpleType name="maritalType">
+     <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="single"/>
+        <xsd:enumeration value="married"/>
+        <xsd:enumeration value="divorced"/>
+        <xsd:enumeration value="widowed"/>
+     </xsd:restriction>
+   </xsd:simpleType>
+
+   <xsd:simpleType name="zCode">
+     <xsd:restriction base="xsd:integer">   
+       <xsd:pattern value="\d{5}"/>
+     </xsd:restriction>
+   </xsd:simpleType>
+
+   <xsd:complexType name="adminType">
+     <xsd:sequence>
+       <xsd:element name="contract" type="contractType"/>
+       <xsd:element name="reqCopayment" type="xsd:string"/>
+       <xsd:element name="benefitDeductibles" type="xsd:string"/>
+       <xsd:element name="amountPaid" type="paidType"/>    
+       <xsd:element name="provider" type="providerType"/>
+     </xsd:sequence>   
+   </xsd:complexType>
+
+   <xsd:complexType name="paidType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:decimal">
+        <xsd:attribute name="currency">
+           <xsd:simpleType>
+             <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="pounds"/>
+                <xsd:enumeration value="euros"/>
+                <xsd:enumeration value="dollars"/>
+             </xsd:restriction>
+           </xsd:simpleType>
+        </xsd:attribute>  
+      </xsd:extension>
+    </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:simpleType name="contractType">
+     <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="basic"/>
+        <xsd:enumeration value="extended"/>
+        <xsd:enumeration value="full coverage"/>
+     </xsd:restriction>
+   </xsd:simpleType>
+
+   <xsd:complexType name="providerType">
+     <xsd:sequence>
+       <xsd:element name="practitionerType" type="xsd:string"/>  
+       <xsd:element name="physicianSpec" type="xsd:string"/>   
+       <xsd:element name="institutionNature" type="xsd:string"/>  
+     </xsd:sequence>   
+   </xsd:complexType>
+
+   <xsd:complexType name="riskStatusType">
+     <xsd:sequence>
+       <xsd:element name="lifestyle" type="lifestyleType"/>
+       <xsd:element name="antecedents" type="antecedentType"/>
+       <xsd:element name="qualityOfLife" type="lifeQualType"/>
+     </xsd:sequence>   
+   </xsd:complexType>
+
+   <xsd:complexType name="lifestyleType">
+     <xsd:sequence>
+       <xsd:element name="tobacco" type="yesNo"/>
+       <xsd:element name="sport" type="yesNo"/>
+     </xsd:sequence>  
+   </xsd:complexType>
+
+   <xsd:simpleType name="yesNo">
+     <xsd:restriction base="xsd:string">
+        <xsd:pattern value="yes|no"/>
+     </xsd:restriction>
+   </xsd:simpleType>
+
+   <xsd:complexType name="antecedentType">
+     <xsd:sequence>
+       <xsd:element name="cancerFirstDegree" type="yesNo"/>
+       <xsd:element name="cardiovascFirstDegree" type="yesNo"/>
+       <xsd:element name="geneticFirstDegree" type="yesNo"/>
+       <xsd:element name="others" type="xsd:string"/> 
+     </xsd:sequence> 
+   </xsd:complexType>
+
+   <xsd:complexType name="lifeQualType">
+     <xsd:sequence>
+       <xsd:element name="physFunc" type="zeroTen"/>
+       <xsd:element name="mentalFunc" type="zeroTen"/>         
+       <xsd:element name="cognitiveFunc" type="zeroTen"/>       
+       <xsd:element name="socialFunc" type="zeroTen"/> 
+     </xsd:sequence>   
+   </xsd:complexType>
+
+   <xsd:simpleType name="zeroTen">
+     <xsd:restriction base="xsd:integer">
+        <xsd:minInclusive value="0"/> 
+        <xsd:maxInclusive value="10"/>
+     </xsd:restriction>
+   </xsd:simpleType>
+
+   <xsd:complexType name="medHistoryType">
+     <xsd:sequence>
+       <xsd:element name="hospAdmissions" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+       <xsd:element name="surgeries" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+       <xsd:element name="pregnancies" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+       <xsd:element name="livebirth" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+     </xsd:sequence>  
+   </xsd:complexType>
+
+   <xsd:complexType name="currentCondMngType">
+     <xsd:sequence>
+       <xsd:element name="healthScreening" type="yesNo"/>    
+       <xsd:element name="diagnoses" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+       <xsd:element name="allergies" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+       <xsd:element name="procedures" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+       <xsd:element name="labTests" type="xsd:string"  minOccurs="0" maxOccurs="unbounded"/>
+       <xsd:element name="medPrescriptions" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+       <xsd:element name="counseling" type="xsd:string"  minOccurs="0" maxOccurs="unbounded"/>
+     </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:simpleType name="outcomesDataType">
+     <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="High-level of functioning and well-being"/>
+        <xsd:enumeration value="Unexpected complications or side effect of care"/>
+        <xsd:enumeration value="Readmission to hospital"/>
+        <xsd:enumeration value="Death"/>
+     </xsd:restriction>
+   </xsd:simpleType>
+
+</xsd:schema>
